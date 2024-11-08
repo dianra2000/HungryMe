@@ -1,0 +1,1171 @@
+header{
+    background-color: transparent;
+}
+
+/* Nav bar */
+
+#btnbars{
+    background-color: transparent;
+    border: transparent;
+}
+
+/* nav bar items*/
+.login-button {
+    background: none;
+    border: none;
+    padding-top: 10%;
+    cursor: pointer;
+}
+
+.cart{
+    background: none;
+    border: none;
+    padding-top: 10%;
+    cursor: pointer;
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*Dark mood */
+
+body.dark-mode {
+    background-color: #313335;
+    color: #ffffff;
+}
+
+.navbar-dark-mode {
+    background-color: #313335;
+}
+
+.navbar-dark-mode .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark-mode .fa-moon {
+    color: #ffffff;
+}
+
+.buttonDark {
+    display: flex;
+    align-items: center;
+}
+
+.buttonDark button {
+    background: gray;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 40%;
+}
+
+/* CSS for popup1 */
+.modal-content {
+    background: #ffffff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modal-header .close {
+    outline: none;
+}
+
+.form-element {
+    margin: 15px 0;
+}
+
+.form-element label {
+    font-size: 14px;
+    color: #4d4949;
+    font-weight: bold;
+}
+
+.form-element input[type="text"],
+.form-element input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-element input[type="text"]::placeholder,
+.form-element input[type="password"]::placeholder {
+    color: rgb(211, 204, 204);
+}
+
+#btnlogin {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #09ec60;
+    color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#showSignUp{
+    border:transparent;
+    color: #0056b3;
+    background-color:transparent;
+}
+
+#showLogin{
+    border:transparent;
+    color: #0056b3;
+    background-color:transparent;
+}
+
+#btnsignup{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #1215c9;
+    color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* TOPIC  */
+.Topic{
+    padding-inline-start: 15px;
+}
+
+.Topic h1 {
+    font-size: 80px;
+    font-family:fantasy; 
+    color: #ff0000;
+    padding: auto;
+    margin: 20px 0;
+    margin-bottom: 0.5px;
+}
+
+#typewriter {
+    font-size: 20px;
+    width: 100%;
+    padding-left: 15px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #f1ee29;
+    margin-top: 20px;
+    text-shadow: 
+        -1px -1px 0 #ff0000,  
+        1px -1px 0 #ff0000,
+        -1px 1px 0 #5f5d5d,
+        1px 1px 0 #5f5d5d; /* Red border effect */
+    height: 30px; /* Adjust this height as needed */
+    display: flex;
+    align-items: center; /* Center text vertically */
+}
+
+.Search-container {
+    margin-right: 10px;
+}
+
+.Search-container input,
+.Location-container input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* HUNGRYME rotate image*/
+.row{
+    width:100%;
+}
+
+.d-flex {
+    justify-content: flex-start;
+}
+
+.col-sm-8, .col-sm-4 {
+    position: relative;
+}
+
+.image {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.rotate-image {
+    animation: spin 6s linear infinite;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* SEARCH */
+.home{
+    width:fit-content;
+}
+
+#food-search-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#btnsearch {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s, opacity 0.3s; /* Smooth transitions for color changes */
+}
+
+/* table */
+.table-container {
+    width: 100%; 
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+#shop-table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+#shop-table th, #shop-table td {
+    padding: 8px; 
+    text-align: left;
+    border: 1px solid #ddd; 
+}
+
+#shop-table th {
+    background-color: #f2f2f2;
+}
+
+#shop-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+#shop-table tbody tr:hover {
+    background-color: #ddd; 
+}
+
+#shop-table tbody td img {
+    max-width: 100px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+/* food selection*/
+
+#c{
+    width: 100%;
+    padding-right: 0%;
+}
+.row{
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.container{
+    cursor: pointer;
+}
+
+.custom-container {
+    max-width: 2000px; /* Set this to the desired maximum width */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; /* Crop the images to fit the height */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+    background-color: rgba(168, 163, 163, 0.7); /* Adjust the last value for transparency */
+    color: white;
+    padding: 10px;
+}
+
+.card {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    width: 300px;
+    height: auto; 
+}
+
+.horizontal-scroll-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.row.flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Search Table */
+#shop-table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0 20px;
+
+}
+
+#shop-table th, #shop-table td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    font-weight: 700;
+    font-size: larger;
+    border: none;
+}
+
+#shop-table th {
+    background-color: #f4f4f4;
+}
+
+#shop-table img {
+    max-width: 100px;
+    height: auto;
+}
+
+#shop-table button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fffefe;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#continu {
+    background-color: #000000; /* Black */
+}
+
+#Place {
+    background-color: #007bff; /* Blue */
+}
+
+#shop-table button.btn-danger {
+    background-color: #dc3545; /* Red */
+}
+
+#shop-table button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    #shop-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    #shop-table th, #shop-table td {
+        white-space: nowrap;
+    }
+}
+
+#ShopTablebtn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffda05;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+#ShopTablebtn:hover {
+    background-color: #ffda05;
+    transform: scale(1.05);
+}
+
+#ShopTablebtn:active {
+    background-color: #ffda05;
+    transform: scale(1);
+}
+
+
+/* How it Work cotaineer */
+
+#D {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+}
+
+
+.container #D .image-container {
+    position: relative;
+}
+
+.container #D .image {
+    width: 100%;
+    height: auto;
+}
+
+.container #dh3{
+    color:orange;
+    text-align: center;
+}
+
+.container #dh4{
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+.container #dp{
+    color: #706969;
+    font-family:cursive;
+    text-align: center;
+}
+
+.container #hh{
+    color: #000000;
+    font-weight: bold;
+}
+
+.container #pp{
+    color: #706969;
+    font-weight: bold;
+    font-family:cursive;
+}
+
+.container  #D .text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/*footer*/
+#footer{
+    color: #000000;
+    background-color: #b3b2b2;
+    padding-bottom: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 0%;
+    line-height: 20px;
+}
+
+#footer .row{
+    padding: 0%;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #ffee00 5%, #eeff00 50%, #b3b2b2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c0d408; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
+}
+
+/* Hide horizontal scrollbar but allow scrolling */
+#horizontal-scroll-wrapper {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+/* -----------------------------HUNGRYME-PutOrder---------------------- */
+#containerPayment {
+    width:fit-content;
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #858181; 
+    border-radius: 5%;
+}
+
+/* Style for elements with ID 'name', 'address', and 'OrderItemId' */
+#name, #address, #OrderItemId {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for the select element with ID 'paymentMethod' */
+#paymentMethod {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+/* Example style for the h2 elements inside containerPayment */
+#containerPayment h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#cardPayment{
+    width:fit-content;
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #858181; 
+}
+
+.modal-content{
+    padding: 0px;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* ---------------------------Add To CART---------------------------- */
+#cart {
+    padding: 20px;
+    background-color: #858181;
+    border-radius: 10px;
+    height: fit-content;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks inside the container */
+}
+
+/* Style for the row inside the cart container */
+#cart .row {
+    display: flex;
+    flex-wrap: nowrap; 
+    margin: 0 -15px;
+}
+
+/* Style for the columns inside the cart container */
+#cart .col-sm-6, 
+#cart .col-md-4, 
+#cart .col-lg-3 {
+    padding: 15px;
+    flex: 0 0 auto;
+}
+
+/* Style for the image cards */
+#cart .image-card {
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    padding: 10px; 
+}
+
+/* Style for the images inside the image cards */
+#cart .image-card img {
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.explore-items {
+    background-color: #ff5a5f;
+    color: #ffb3b3;
+    margin-left: 60px;
+}
+
+/*Browse more Items*/
+
+.more-to-love {
+    margin: 20px ;
+}
+
+.more-to-love h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px ;
+    font-weight: bold;
+}
+
+
+.more-to-love h4 {
+    font-size: 18px;
+    color: #fc4001;
+    font-style: italic;
+    margin-left: 50px;
+
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.center-cart-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.center-cart-image img {
+   max-width: 400px; 
+   max-height:  400px; 
+}
+
+/*Zoom in images in more to love */
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* General container styling */
+#addtoCart {
+    width: 100% ;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Cart table */
+#addtoCart {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+#addtoCart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#addtoCart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#addtoCart th, #addtoCart td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border: none;
+    font-weight: 700;
+}
+
+#addtoCart img {
+    max-width: 100px;
+    height: auto;
+}
+
+#addtoCart button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#continu {
+    background-color: #000000; /* Green */
+}
+
+/* Specific styles for Place Order button */
+#Place {
+    background-color: #007bff; /* Blue */
+}
+
+
+#addtoCart button.btn-danger {
+    background-color: #dc3545;
+}
+
+#addtoCart button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    #addtoCart table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    #addtoCart th, #addtoCart td {
+        white-space: nowrap;
+    }
+}
+
+#customizationModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:fit-content;
+    overflow: auto;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* ---------------------------Shop Owner---------------------------- */
+
+#openModal {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    width:fit-content;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    margin-left: 20px; 
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#openModal:hover {
+    background-color: #45a049;
+}
+
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width:fit-content; 
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#ShopOwnerForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    font-size: larger;
+    border-radius: 10px;
+}
+
+#ShopOwnerForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#ShopOwnerForm input, #ShopOwnerForm textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#ShopOwnerForm input::placeholder, #ShopOwnerForm textarea::placeholder {
+    color: rgb(201, 201, 201);
+    font-weight: 500;
+}
+
+#ShopOwnerForm button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c00ff;
+    color: white;
+    cursor: pointer;
+}
+
+#ShopOwnerCon {
+    padding: 20px;
+    background-color: #858181;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#ShopOwnerCon h2 {
+    font-weight: bold;
+}
+
+#menuList {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/* ---------------------------Admin---------------------------------- */
+
+#adminActions {
+    padding: 20px;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    overflow-x: auto;
+    display: block;
+}
+
+#showHandleDeliveryModal {
+    background-color: blue;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#showHandlePaymentModal {
+    background-color: #32ce6e;
+    color: white; 
+    display: block; 
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+#adminActions h2{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ----- */
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+
+/* Modal title */
+.modal-title {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Close button */
+.close {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+#ll{
+    font-weight: 700;
+}
+
+/* Modal body */
+.modal-body {
+    padding: 1rem;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Form control */
+.form-control {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Primary button */
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.form-container {
+    color: #222;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:max-content;
+}
+
+.submit-button {
+    display: block;
+    margin-top: 10px;
+}
+
+#Adminf h2 {
+    margin-bottom: 20px;
+}
+#Adminf label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#Adminf input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#priceChange {
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:max-content;
+}
+
+/* ------------------------------------------------------------------ */
+/* ---------------------------Delivery_Boy--------------------------- */
+
+.deliveryDetailsForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d4d4d4;
+    border-radius: 2%;
+    color: #141414;
+}
+
+.delivery-details {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.btn-delivered,
+.btn-nondelivered {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn-delivered {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-nondelivered {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

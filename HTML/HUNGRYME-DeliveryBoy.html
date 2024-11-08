@@ -1,0 +1,193 @@
+<!-- <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $location = $_POST['location'];
+    $items = $_POST['items'];
+    $quantity = $_POST['quantity'];
+
+    // Connect to the database
+    $conn = new mysqli("localhost", "username", "password", "database");
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Insert data into the database
+    $sql = "INSERT INTO delivery_details (name, address, location, items, quantity) VALUES ('$name', '$address', '$location', '$items', '$quantity')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close the connection
+    $conn->close();
+}
+?> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="title.jpg">
+    <title>HUNGRYME_Admin</title>
+    <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        /* The following styles are not relevant to the toggle button or list items */
+        #l1,
+        #l2,
+        #l3,
+        #l4,
+        #l5,
+        #l6,
+        #l7 {
+            display: none;
+            /* Initially hide the list items */
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnbars").click(function () {
+                $("#l1").toggle("slow");
+                $("#l2").toggle("slow");
+                $("#l3").toggle("slow");
+                $("#l4").toggle("slow");
+                $("#l5").toggle("slow");
+                $("#l6").toggle("slow");
+                $("#l7").toggle("slow");
+            });
+
+            // Show modal on handle delivery button click
+            $('#showHandleDeliveryModal').click(function () {
+                $('#handleDeliveryModal').modal('show');
+            });
+
+            // Show modal on handle payment button click
+            $('#showHandlePaymentModal').click(function () {
+                $('#handlePaymentModal').modal('show');
+            });
+        });
+    </script>
+    <nav class="navbar navbar-expand-sm bg-warning">
+        <div class="container-fluid">
+            <div class="logo textual pull-left">
+                <img src="HUNGRYME(txt).png" height="40px" alt="Logo">
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li id="l1"><a class="nav-link" href="#home">Home</a></li>
+                <li id="l2"><a class="nav-link" href="#footer">About us</a></li>
+                <li id="l3"><a class="nav-link" href="https://wa.me/94722714507">Contact us</a></li>
+                <li id="l4"><a class="nav-link" href="https://maps.app.goo.gl/5sHYmUQesEMHQfWNA">Main Branch</a></li>
+                <li id="l7">
+                    <div class="buttonDark">
+                        <button onclick="toggleDarkMode()">
+                            <i class="fa-solid fa-moon fa-xl"></i>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <button id="btnbars"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br>
+
+    <form id="deliveryDetailsForm" class="deliveryDetailsForm">
+        <div class="delivery-details">
+            <div class="form-group">
+                <label for="name"><strong>Name:</strong></label>
+                <input type="r" class="form-control" id="name" name="name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="address"><strong>Address:</strong></label>
+                <input type="text" class="form-control" id="address" name="address" readonly>
+            </div>
+            <div class="form-group">
+                <label for="items"><strong>Items:</strong></label>
+                <input type="text" class="form-control" id="items" name="items" readonly>
+            </div>
+            <div class="form-group">
+                <label for="quantity"><strong>Quantity:</strong></label>
+                <input type="text" class="form-control" id="quantity" name="quantity" readonly>
+            </div>
+            <div class="form-group">
+                <label for="location"><strong>Location:</strong></label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7935.410344540302!2d80.213322244567!3d6.035137195203618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e9!4m5!1s0x3ae173bd862b2019%3A0x29947d173eea0919!2sPizza%20Hut%20-%20Galle%2C%20Colombo%20-%20Galle%20Main%20Road%2C%20Galle!3m2!1d6.0356742!2d80.2099674!4m5!1s0x3ae173b12f4deb15%3A0x31ccbc33eb91d2ac!2zTklCTSBHYWxsZSBDZW50cmUsIOC2uOC3lOC3hOC3lOC2r-C3lCDgt4Dgt5Pgtq_gt5LgtrosIEdhbGxl!3m2!1d6.0371624!2d80.2240274!5e0!3m2!1sen!2slk!4v1720377139615!5m2!1sen!2slk" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-success btn-delivered" value="Delivered">
+                <input type="button" class="btn btn-danger btn-nondelivered" value="Not Delivered">
+            </div>
+        </div>
+    </form>
+
+    <br><br>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn-delivered").click(function () {
+                alert("Delivery marked as Delivered");
+            });
+
+            $(".btn-nondelivered").click(function () {
+                alert("Delivery marked as Not Delivered");
+            });
+        });
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+    <footer>
+        <div class="text-center text-lg-start" id="footer">
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <div class="me-5 d-none d-lg-block">
+                    <span>Check with us on social networks:</span>
+                </div>
+                <div>
+                    <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="me-4 text-reset"><i class="fab fa-google"></i></a>
+                    <a href="" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
+                </div>
+            </section>
+            <div class="row mt-3">
+                <div class="col-md-6 col-lg-4 col-xl-8 mx-auto mb-4">
+                    <h4 class="text-uppercase fw-bold mb-4"><i class="fas fa-burger me-3"></i>HungryMe</h4>
+                    <p>Join us to quench your hunger</p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> No.46, Matara RD, Galle</p>
+                    <p><i class="fas fa-envelope me-3"></i>hungryme@gmail.com</p>
+                    <p><i class="fas fa-phone me-3"></i> + 94 915 628 313</p>
+                    <p><i class="fas fa-phone me-3"></i> + 94 915 628 314</p>
+                </div>
+            </div>
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">© 2024 Copyright:<a
+                    class="text-reset fw-bold" href="#">Hungryme.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

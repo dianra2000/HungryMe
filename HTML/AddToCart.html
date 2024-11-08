@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="title.jpg">
+    <title>HUNGRYME_CART</title>
+    <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        /* The following styles are not relevant to the toggle button or list items */
+        #l1,
+        #l2,
+        #l3,
+        #l4,
+        #l5,
+        #l6,
+        #l7 {
+            display: none;
+            /* Initially hide the list items */
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnbars").click(function () {
+                $("#l1").toggle("slow");
+                $("#l2").toggle("slow");
+                $("#l3").toggle("slow");
+                $("#l4").toggle("slow");
+                $("#l5").toggle("slow");
+                $("#l6").toggle("slow");
+                $("#l7").toggle("slow");
+            });
+        });
+    </script>
+
+    <nav class="navbar navbar-expand-sm bg-warning">
+        <div class="container-fluid">
+            <div class="logo textual pull-left">
+                <img src="HUNGRYME(txt).png" height="40px" alt="Logo">
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li id="l1"><a class="nav-link" href="#home">Home</a></li>
+                <li id="l2"><a class="nav-link" href="#footer">About us</a></li>
+                <li id="l3"><a class="nav-link" href="https://wa.me/94722714507">Contact us</a></li>
+                <li id="l4"><a class="nav-link" href="https://maps.app.goo.gl/5sHYmUQesEMHQfWNA">Main Branch</a></li>
+                <li id="l7">
+                    <div class="buttonDark"> <button onclick="DarkMode()">
+                            <i class="fa-solid fa-moon fa-xl"></i>
+                        </button>
+                    </div>
+                    <script>
+                        function DarkMode() {
+                            var element = document.body;
+                            element.classList.toggle("dark-mode");
+                        }
+                    </script>
+                </li>
+                <li> <button id="btnbars"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Topic">
+        <h1>C A R T</h1>
+    </div>
+    <div id="typewriter">
+        <script>
+            var i = 0;
+            var firstText = "Hey there...! Welcome to HUNGRYME...";
+            var secondText = "Join us to quench your hunger...";
+            var speed = 50;
+            var phase = 1;
+
+            function typeWriter() {
+                if (phase === 1) {
+                    if (i < firstText.length) {
+                        document.getElementById("typewriter").innerHTML += firstText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        setTimeout(clearText, 0); // Clear immediately
+                    }
+                } else if (phase === 2) {
+                    if (i < secondText.length) {
+                        document.getElementById("typewriter").innerHTML += secondText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        setTimeout(clearText, 0); // Clear immediately
+                    }
+                }
+            }
+
+            function clearText() {
+                i = 0;
+                document.getElementById("typewriter").innerHTML = "";
+                phase = phase === 1 ? 2 : 1; // Switch between phase 1 and phase 2
+                setTimeout(typeWriter, speed);
+            }
+
+            window.onload = function () {
+                typeWriter();
+            };
+        </script>
+    </div>
+    <br><br>
+    <div class="container" id="cart">
+        <div class="row" id="horizontal-scroll-wrapper">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="image-card">
+                    <img src="null" alt="Image1">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="image-card">
+                    <img src="null" alt="Image2">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="image-card">
+                    <img src="null" alt="Image3">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="image-card">
+                    <img src="null" alt="Image4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="more-to-love">
+        <h2>More to love</h2>
+        <h4>Mix Rices</h4>
+        <div class="col-12" id="img">
+            <div class="horizontal-scroll-wrapper">
+                <div class="row flex-nowrap">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="mixrice.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text">Hotel SEA LINE <br> Rs.1150</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="mixrice4.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text">Avendra Garden <br> Rs.800</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="mixrice2.png"
+                                    id="image"></a>
+                            <div class="overlay-text"> KFC <br> Rs.1200 </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="mixrice3.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> PnS <br> Rs.790 </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="mixrice.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> JavaBeverage <br> Rs.1150</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="mixrice4.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> Hut of Rice <br> Rs.800</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4>Kottu</h4>
+        <div class="col-12" id="img">
+            <div class="horizontal-scroll-wrapper">
+                <div class="row flex-nowrap">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="Kottu1jpg.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> Aroma <br> Rs.900</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="kottu.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text">AluRoma <br> Rs.1400</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="Kottu2jpg.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> GalleInn <br> Rs.880</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="Kottu3jpg.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> PnS <br> Rs.1000</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="Kottu1jpg.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> MacDonald <br> Rs.980</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card" style="width: 100%;">
+                            <a class="nav-link" href="####"><img class="card-img-top popup-img" src="kottu.jpg"
+                                    id="image"></a>
+                            <div class="overlay-text"> Mr Kottu <br> Rs.1290</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <!-- Footer -->
+    <footer>
+        <div class="text-center text-lg-start" id="footer">
+
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Check with us on social networks:</span>
+                </div>
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="me-4 text-reset"><i class="fab fa-google"></i></a>
+                    <a href="" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
+                </div>
+            </section>
+
+            <div class="row mt-3">
+                <div class="col-md-6 col-lg-4 col-xl-8 mx-auto mb-4">
+                    <h4 class="text-uppercase fw-bold mb-4"><i class="fas fa-burger me-3"></i>HungryMe</h4>
+                    <p>Join us to quench your hunger</p>
+                </div>
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> No.46, Matara RD, Galle</p>
+                    <p><i class="fas fa-envelope me-3"></i>hungryme@gmail.com</p>
+                    <p><i class="fas fa-phone me-3"></i> + 94 915 628 313</p>
+                    <p><i class="fas fa-phone me-3"></i> + 94 915 628 314</p>
+                </div>
+            </div>
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">© 2024 Copyright:<a
+                    class="text-reset fw-bold" href="#">Hungryme.com</a>
+            </div>
+    </footer>
+
+
+
+</body>
+
+</html>
